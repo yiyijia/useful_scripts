@@ -5,6 +5,6 @@ const { main_handler: iKuuu } = require('./src/iKuuuCheckIn')
 
 exports.main_handler = async () => {
   await v2Free()
-  await GlaDOS()
-  await iKuuu()
+  //await GlaDOS()
+  //await iKuuu()
 }
