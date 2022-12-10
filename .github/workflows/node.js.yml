@@ -31,5 +31,5 @@ jobs:
         iKuuuCookie:  ${{  secrets.iKuuuCookie }}
     - run: npm install
     - run: npm ci
-    - run: npm run test
+    - run: v2freeCookie=${v2freeCookie} GLADOSCookie=${GLADOSCookie} iKuuuCookie=${iKuuuCookie} node index.js
       
