@@ -28,8 +28,8 @@ jobs:
       env:
         v2freeCookie: ${{ secrets.v2freeCookie }}
         GLADOSCookie: ${{ secrets.GLADOSCookie }}
-        iKuuuCookie:  ${{  secrets.iKuuuCookie }}
+        iKuuuCookie:  ${{ secrets.iKuuuCookie }}
     - run: npm install
     - run: npm ci
-    - run: env v2freeCookie=${v2freeCookie} GLADOSCookie=${GLADOSCookie} iKuuuCookie=${iKuuuCookie} node index.js
+    - run: node index.js
       
