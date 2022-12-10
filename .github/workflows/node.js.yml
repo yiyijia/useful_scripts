@@ -32,6 +32,5 @@ jobs:
         v2freeCookie: ${{ secrets.v2freeCookie }}
         GLADOSCookie: ${{ secrets.GLADOSCookie }}
         iKuuuCookie:  ${{ secrets.iKuuuCookie }}
-      run: |
-        node index.js
+      run: node index.js
       
