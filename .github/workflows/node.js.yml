@@ -26,7 +26,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        GlaDOSCookie: 'AWSALB=2g8LK48f+YRjYlfav7EMnM4yJBM/oDpHKCJqxyGkbmlz1H8YFctEH5IM1P1VqKIkx+ZzZVndYGGjNswyw2uawi4kdjlTqZBco58mrh6K2vSLONy0FUw5huZSnKYW; AWSALBCORS=2g8LK48f+YRjYlfav7EMnM4yJBM/oDpHKCJqxyGkbmlz1H8YFctEH5IM1P1VqKIkx+ZzZVndYGGjNswyw2uawi4kdjlTqZBco58mrh6K2vSLONy0FUw5huZSnKYW'
         cache: 'npm'
     - run: npm install
     - run: node index.js
