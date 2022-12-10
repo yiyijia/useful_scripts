@@ -25,10 +25,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      env:
         v2freeCookie: ${{ secrets.v2freeCookie }}
         GLADOSCookie: ${{ secrets.GLADOSCookie }}
         iKuuuCookie:  ${{ secrets.iKuuuCookie }}
+        
     - run: npm install
     - run: npm ci
     - run: node index.js
