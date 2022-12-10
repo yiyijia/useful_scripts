@@ -11,7 +11,6 @@ const iKuuuCookie = process.env["iKuuuCookie"]
 const iKuuuURL = "https://ikuuu.dev/user/checkin"
 
 const CheckIn = async () => {
-  console.log(process.env)
   if (!iKuuuCookie) {
     console.log("环境变量iKuuuCookie未定义")
     return false
