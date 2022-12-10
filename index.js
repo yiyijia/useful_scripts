@@ -8,3 +8,4 @@ exports.main_handler = async () => {
   await GlaDOS()
   await iKuuu()
 }
+main_handler();
