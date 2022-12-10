@@ -30,7 +30,7 @@ jobs:
     - name: execute test
       env:
         v2freeCookie: ${{ secrets.V2FREECOOKIE }}
-        GLADOSCookie: ${{ secrets.GLADOSCOOKIE }}
+        GlaDOSCookie: ${{ secrets.GLADOSCOOKIE }}
         iKuuuCookie:  ${{ secrets.IKUUUCOOKIE }}
       run: node index.js
       
