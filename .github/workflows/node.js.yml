@@ -28,10 +28,5 @@ jobs:
     - run: npm install
     - run: npm ci
     - name: execute test
-      env: 
-        v2freeCookie: ${{ secrets.V2FREECOOKIE }}
-        GLADOSCookie: ${{ secrets.GLADOSCOOKIE }}
-        iKuuuCookie:  ${{ secrets.IKUUUCOOKIE }}
-        TEST: ${{ secrets.TEST }}
       run: node index.js
       
