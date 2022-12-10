@@ -11,9 +11,6 @@ const GlaDOSCookie = process.env['GlaDOSCookie']
 
 const checkIn = async () => {
   const url = 'https://glados.rocks/api/user/checkin'
-  console.log('GlaDOSCookie',GlaDOSCookie)
-  console.log('v2freeCookie',process.env['v2freeCookie'])
-  console.log('iKuuuCookie',process.env['iKuuuCookie'])
   if (!GlaDOSCookie) {
     console.log('环境变量GLADOSCookie未定义')
     return false
