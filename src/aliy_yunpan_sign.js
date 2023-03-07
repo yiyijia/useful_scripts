@@ -6,16 +6,14 @@
 
 const updateAccesssTokenURL = "https://auth.aliyundrive.com/v2/account/token"
 const signinURL = "https://member.aliyundrive.com/v1/activity/sign_in_list"
-const refreshToeknArry = [
-    "",
-    ""
-    ]
+const aliypCookie = process.env["aliypCookie"]
+const refreshToeknArry = [aliypCookie ]
 
 const fetch = require("node-fetch")
 const notify = require('./sendNotify');
 
 
-!(async() => {
+const CheckIn = async() => {
     for (const elem of refreshToeknArry) {
         
         const queryBody = {
@@ -55,9 +53,8 @@ const notify = require('./sendNotify');
 
     }
     // await notify.sendNotifyBark(`v2free 自动签到结果`,allnotify)
-    
+}
 
-})().catch((e) => {
-    console.error(`❗️  运行错误！\n${e}`)
-}).finally()
-// notify.sendNotify(`v2free 自动签到结果`,allnotify)
+exports.main_handler = async () => {
+  return CheckIn()
+}
