@@ -13,6 +13,7 @@ const fetch = require("node-fetch")
 
 
 const CheckIn = async() => {
+	console.log('start ali sign')
     for (const elem of refreshToeknArry) {
         
         const queryBody = {
@@ -21,21 +22,21 @@ const CheckIn = async() => {
         };
 
         //使用 refresh_token 更新 access_token
-        fetch(updateAccesssTokenURL, {
+        await fetch(updateAccesssTokenURL, {
             method: "POST",    
             body: JSON.stringify(queryBody),
 		    headers: {'Content-Type': 'application/json'}
         })
         .then((res) => res.json())
-        .then((json) => {
-            // console.log(json);
+        .then(async (json) => {
+             console.log(json);
 
             let access_token = json.access_token;
             console.log(access_token);
             
             
             //签到
-            fetch(signinURL, {
+            await fetch(signinURL, {
                 method: "POST",
                 body: JSON.stringify(queryBody),
                 headers: {'Authorization': 'Bearer '+access_token,'Content-Type': 'application/json'}
