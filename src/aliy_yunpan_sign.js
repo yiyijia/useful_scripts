@@ -29,10 +29,10 @@ const CheckIn = async() => {
         })
         .then((res) => res.json())
         .then(async (json) => {
-             console.log(json);
-
+             //console.log(json);
+		console.log('req first success')
             let access_token = json.access_token;
-            console.log(access_token);
+            //console.log(access_token);
             
             
             //签到
