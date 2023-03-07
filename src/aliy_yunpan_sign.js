@@ -10,7 +10,6 @@ const aliypCookie = process.env["aliypCookie"]
 const refreshToeknArry = [aliypCookie ]
 
 const fetch = require("node-fetch")
-const notify = require('./sendNotify');
 
 
 const CheckIn = async() => {
